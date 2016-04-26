@@ -9,5 +9,11 @@ namespace Prototype.Classes.ConcreteCharacters
 {
     public class Demon:Monster
     {
+        public Demon(int healt, int speed):base(healt, speed){}
+
+        public override Monster Clone()
+        {
+            return new Demon(Health, Speed);
+        }
     }
 }

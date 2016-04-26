@@ -9,7 +9,13 @@ namespace Prototype.Classes.Spawners.AbstractSpawner
 {
     public class AbstractSpawner
     {
-        public AbstractSpawner() { }
-        public virtual Monster SpawnMonster() { return null; }
+        public AbstractSpawner(Monster prototype)
+        {
+            this.prototype = prototype;
+        }
+        
+        public virtual Monster SpawnMonster() { return prototype.Clone(); }
+
+        private Monster prototype;
     }
 }

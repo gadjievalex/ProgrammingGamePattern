@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Prototype.Classes.AbstractCharacters;
+using Prototype.Classes.ConcreteCharacters;
+using Prototype.Classes.Spawners.AbstractSpawner;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,6 +13,11 @@ namespace Prototype
     {
         static void Main(string[] args)
         {
+            Monster ghostPrototype = new Ghost(11, 22);
+            AbstractSpawner spawner = new AbstractSpawner(ghostPrototype);
+
+            Monster demonPrototype = new Demon(22, 44);
+            spawner = new AbstractSpawner(demonPrototype);
 
 
 

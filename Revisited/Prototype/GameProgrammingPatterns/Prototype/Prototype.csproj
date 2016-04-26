@@ -48,8 +48,6 @@
     <Compile Include="Classes\ConcreteCharacters\Ghost.cs" />
     <Compile Include="Classes\ConcreteCharacters\Sorcerer.cs" />
     <Compile Include="Classes\Spawners\AbstractSpawner\AbstractSpawner.cs" />
-    <Compile Include="Classes\Spawners\ConcreteSpawner\DemonSpawner.cs" />
-    <Compile Include="Classes\Spawners\ConcreteSpawner\GhostSpawner.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
