@@ -19,7 +19,8 @@ namespace Prototype
             Monster demonPrototype = new Demon(22, 44);
             spawner = new AbstractSpawner(demonPrototype);
 
-
+            Monster sorcererPrototype = new Sorcerer(44, 88);
+            spawner = new AbstractSpawner(sorcererPrototype);
 
             Console.ReadLine();
         }
