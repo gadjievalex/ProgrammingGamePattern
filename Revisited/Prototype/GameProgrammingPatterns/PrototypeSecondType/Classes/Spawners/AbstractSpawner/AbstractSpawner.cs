@@ -1,4 +1,5 @@
 ﻿using PrototypeSecondType.Classes.AbstractCharacters;
+using PrototypeSecondType.Classes.Spawners.ConcreteSpawners;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,13 +10,14 @@ namespace PrototypeSecondType.Classes.Spawners.AbstractSpawner
 {
     public class AbstractSpawner
     {
-        public AbstractSpawner(Monster prototype)
+        public AbstractSpawner(SpawnCallback spawn)
         {
-            this.prototype = prototype;
+            this.callBackSpawner = spawn;
         }
         
-        public virtual Monster SpawnMonster() { return prototype.Clone(); }
+        public virtual Monster SpawnMonster() { return callBackSpawner.SpawnMonster(); }
 
         private Monster prototype;
+        private SpawnCallback callBackSpawner;
     }
 }
